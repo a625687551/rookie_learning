@@ -1,0 +1,15 @@
+// manifest.json
+{
+  "name": "fuckcsdn", // 扩展的名称（name）
+  "version": "1.0", // 插件版本号
+  "description": "csdn可以复制", // 插件描述
+  "manifest_version": 2, // manifest 版本，目前是必须是2或者3
+
+  // 指定扩展在Chrome 工具栏中的图标，它定义了扩展图标文件位置（default_icon）、
+  // 悬浮提示（default_title）和点击扩展图标所显示的页面位置（default_popup）
+  "browser_action": {
+    "default_title": "Hello, 某SDN!",
+    "default_icon": "/images/logo.png", // 浏览器右上角图标设置
+    "default_popup": "popup.html"
+  }
+}
