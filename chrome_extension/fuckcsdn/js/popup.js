@@ -19,3 +19,5 @@ function sendMessageToContentScript(message, callback) {
     });
   });
 }
+//注释广告
+
