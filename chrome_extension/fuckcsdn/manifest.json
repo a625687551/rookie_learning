@@ -1,15 +1,12 @@
-// manifest.json
 {
-  "name": "fuckcsdn", // 扩展的名称（name）
-  "version": "1.0", // 插件版本号
-  "description": "csdn可以复制", // 插件描述
-  "manifest_version": 2, // manifest 版本，目前是必须是2或者3
-
-  // 指定扩展在Chrome 工具栏中的图标，它定义了扩展图标文件位置（default_icon）、
-  // 悬浮提示（default_title）和点击扩展图标所显示的页面位置（default_popup）
-  "browser_action": {
+  "name": "fuckcsdn",
+  "version": "1.0",
+  "description": "csdn插件，去广告可复制",
+  "manifest_version": 3,
+  "permissions": ["tabs","webRequest"],
+  "action": {
     "default_title": "Hello, 某SDN!",
-    "default_icon": "./images/logo.png", // 浏览器右上角图标设置
+    "default_icon": "./images/logo.png",
     "default_popup": "popup.html"
   },
   "icons": {
@@ -20,10 +17,13 @@
   // 需要直接注入页面的JS
   "content_scripts": [
     {
-      //"matches": ["http://*/*", "https://*/*"],"<all_urls>" 表示匹配所有地址
-      "matches": ["https://blog.csdn.net/*"],
+      "matches": [
+        "*://blog.csdn.net/*",
+        "*://g.csdnimg.cn/*"
+      ],
       // 多个JS按顺序注入
       "js": [
+//        "/js/popup.js",
         "/js/content_script.js"
       ],
       // "css": ["css/custom.css"],
@@ -34,5 +34,5 @@
   ],
   // 定义了扩展需要向 Chrome 申请的权限，比如通过 XMLHttpRequest 跨域请求数据、访问浏览器选项卡（tabs）
   // 获取当前活动选项卡（activeTab）、浏览器通知（notifications）、存储（storage）等，可以根据需要添加。
-  "permissions": ["tabs"]
+
 }

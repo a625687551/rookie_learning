@@ -1,3 +1,13 @@
+//注释广告
+chrome.webRequest.onBeforeRequest.addListener(
+  function() {return {cancel : true};},
+  {urls:[
+        "*://g.csdnimg.cn/common/csdn-login-box/*",
+        "*://g.csdnimg.cn/common/csdn-toolbar/*",
+        "*://g.csdnimg.cn/common/csdn-report/report*"
+    ]},
+  ["blocking"] //类型blocking为拦截,
+);
 // 这里的js其实是操作popup.html产生的dom的
 document.addEventListener('DOMContentLoaded', function () {
   // 获取初始值
@@ -19,5 +29,4 @@ function sendMessageToContentScript(message, callback) {
     });
   });
 }
-//注释广告
 
