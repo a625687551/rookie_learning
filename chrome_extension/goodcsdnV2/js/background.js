@@ -11,8 +11,9 @@ var callback = function (detail) {
 var filter = {
     urls: [
         "https://g.csdnimg.cn/common/csdn-login-box/*",
-        "https://vip.csdn.net/*",
-        // "https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js",
+        // "https://vip.csdn.net/*",
+        // "*://kunpeng.csdn.net/ad/*"
+        "https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js",
     ]
 };
 var opt_extraInfoSpec = ["blocking"];
