@@ -1,7 +1,7 @@
 {
   "name": "GoodCsdn",
-  "description": " 去广告 可复制 make csdn great again",
-  "version": "1.0",
+  "description": " 去广告 可复制 移除关注可见 make csdn great again",
+  "version": "2.0",
   "manifest_version": 2,
   "permissions": [
     "tabs",
